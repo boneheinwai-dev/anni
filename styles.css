@@ -25,35 +25,8 @@ body {
 }
 
 .rose {
-    width: 50px;
-    height: auto;
-}
-
-
-.bubbles,
-.hearts {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.bubble,
-.heart,
-.rose {
-    position: absolute;
-    bottom: -100px;
-    animation: rise 10s infinite ease-in;
-}
-
-.bubble {
     width: 40px;
-    height: 40px;
-    background-color: rgba(255, 105, 180, 0.6);
-    border-radius: 50%;
+    height: auto;
 }
 
 .heart {
@@ -83,83 +56,62 @@ body {
     top: 0;
 }
 
-.rose {
-    width: 50px;
-    height: auto;
-}
-
-.bubble:nth-child(1) {
+.rose:nth-child(1) {
     left: 10%;
     animation-duration: 15s;
     animation-delay: 0s;
 }
 
-.bubble:nth-child(2) {
+.rose:nth-child(2) {
     left: 20%;
-    width: 20px;
-    height: 20px;
     animation-duration: 10s;
     animation-delay: 2s;
 }
 
-.bubble:nth-child(3) {
+.rose:nth-child(3) {
     left: 30%;
-    width: 50px;
-    height: 50px;
     animation-duration: 12s;
     animation-delay: 4s;
 }
 
-.bubble:nth-child(4) {
+.rose:nth-child(4) {
     left: 40%;
     animation-duration: 8s;
     animation-delay: 6s;
 }
 
-.bubble:nth-child(5) {
+.rose:nth-child(5) {
     left: 50%;
-    width: 60px;
-    height: 60px;
     animation-duration: 14s;
     animation-delay: 8s;
 }
 
-.bubble:nth-child(6) {
+.rose:nth-child(6) {
     left: 60%;
-    width: 20px;
-    height: 20px;
     animation-duration: 10s;
     animation-delay: 3s;
 }
 
-.bubble:nth-child(7) {
+.rose:nth-child(7) {
     left: 70%;
-    width: 40px;
-    height: 40px;
     animation-duration: 12s;
     animation-delay: 5s;
 }
 
-.bubble:nth-child(8) {
+.rose:nth-child(8) {
     left: 80%;
-    width: 30px;
-    height: 30px;
     animation-duration: 9s;
     animation-delay: 7s;
 }
 
-.bubble:nth-child(9) {
+.rose:nth-child(9) {
     left: 90%;
-    width: 50px;
-    height: 50px;
     animation-duration: 11s;
     animation-delay: 1s;
 }
 
-.bubble:nth-child(10) {
+.rose:nth-child(10) {
     left: 95%;
-    width: 25px;
-    height: 25px;
     animation-duration: 13s;
     animation-delay: 9s;
 }
@@ -252,6 +204,9 @@ header h1 {
 
 .photos {
     margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .photos img {
@@ -278,31 +233,20 @@ footer p {
     }
 }
 
-.roses {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.roses img {
-    width: 50px;
-    height: auto;
-    animation: float 5s ease-in-out infinite;
-}
-
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0);
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5em;
     }
 
-    50% {
-        transform: translateY(-20px);
+    .message {
+        font-size: 1em;
+    }
+
+    .photos img {
+        max-width: 100px;
+    }
+
+    footer p {
+        font-size: 0.8em;
     }
 }
